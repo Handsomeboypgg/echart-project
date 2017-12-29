@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/global.css">
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/wy_rem.js"></script>
+
+	<link rel="stylesheet" href="../css/data-list.css">
+	<script type="text/javascript" src="../js/data-list.js"></script>
+</head>
+<body>
+	<div class="bg"></div>
+	<!--头部-->
+	<div class="header">
+		<!--标题-->
+		<h2>CGC全球智慧产业联盟共享经济平台实时交易结算数据中心</h2>
+		<!--交易额度跟人数-->
+		<div class="details-box">
+			<div class="details-b-c">
+				<div class="tit-1">平台总人数</div>
+				<div class="tit-2"><span class="people timerno">17405</span>(人)</div>
+			</div>
+			<div class="details-b-c">
+				<div class="tit-1">交易总金额</div>
+				<div class="tit-2"><span class="transaction timer">975040.09</span>(元)</div>
+			</div>
+			<div class="details-b-c">
+				<div class="tit-1">平台总收入</div>
+				<div class="tit-2"><span class="income timer2">524713.30</span>(元)</div>
+			</div>
+		</div>
+		<!--logo-->
+		<div class="logo">
+			<img src="../images/logo.png" alt="">
+		</div>
+
+	</div>
+
+	<!--记录-->
+	<div class="history-box">
+		<!--标题-->
+		<div class="hb-tit">
+			<ul class="list">
+				<li>时间</li>
+				<li>手机号</li>
+				<li>消费金额(元)</li>
+				<li>消费门店</li>
+				<li>即时奖励(元)</li>
+				<li>账户余额(元)</li>
+				<li>创业者(元)</li>
+				<li>联盟企业(元)</li>
+				<li>行业服务商</li>
+				<li>城市运营商</li>
+				<li>省级管理</li>
+				<li>成高成</li>
+			</ul>
+		</div>
+
+		<!--数据-->
+		<div class="data-box">
+			<ul class="list">
+				<li>12.06 13:29</li>
+				<li>135****2357</li>
+				<li>120.00</li>
+				<li>广州鸿德国际大酒店</li>
+				<li>9.60</li>
+				<li>1000.00</li>
+				<li>18.00</li>
+				<li>36.00</li>
+				<li>4.80</li>
+				<li>4.80</li>
+				<li>1000.00</li>
+				<li>19.20</li>
+
+			</ul>
+
+			<ul class="list">
+				<li>12.06 13:29</li>
+				<li>135****2357</li>
+				<li>120.00</li>
+				<li>广州鸿德国际大酒店</li>
+				<li>9.60</li>
+				<li>1000.00</li>
+				<li>18.00</li>
+				<li>36.00</li>
+				<li>4.80</li>
+				<li>4.80</li>
+				<li>1000.00</li>
+				<li>19.20</li>
+
+			</ul>
+			<ul class="list">
+				<li>12.06 13:29</li>
+				<li>135****2357</li>
+				<li>120.00</li>
+				<li>广州鸿德国际大酒店</li>
+				<li>9.60</li>
+				<li>1000.00</li>
+				<li>18.00</li>
+				<li>36.00</li>
+				<li>4.80</li>
+				<li>4.80</li>
+				<li>1000.00</li>
+				<li>19.20</li>
+
+			</ul>
+			<ul class="list">
+				<li>12.06 13:29</li>
+				<li>135****2357</li>
+				<li>120.00</li>
+				<li>广州鸿德国际大酒店</li>
+				<li>9.60</li>
+				<li>1000.00</li>
+				<li>18.00</li>
+				<li>36.00</li>
+				<li>4.80</li>
+				<li>4.80</li>
+				<li>1000.00</li>
+				<li>19.20</li>
+
+			</ul>
+			<ul class="list">
+				<li>12.06 13:29</li>
+				<li>135****2357</li>
+				<li>120.00</li>
+				<li>广州鸿德国际大酒店</li>
+				<li>9.60</li>
+				<li>1000.00</li>
+				<li>18.00</li>
+				<li>36.00</li>
+				<li>4.80</li>
+				<li>4.80</li>
+				<li>1000.00</li>
+				<li>19.20</li>
+
+			</ul>
+			
+
+
+		</div>
+
+
+	</div>
+
+	
+</body>
+<script type="text/javascript" src='../js/jquery.countup.js'></script>
+<script type="text/javascript">
+
+	
+
+	// readeyAnimation();
+	setInterval( 'dataAnimation()' , 3000)
+
+	//一进入进行动画展示
+	jQuery(function($) {
+        $(".timerno").countTo({
+            lastSymbol: "", //显示在最后的字符
+            from: 0,  // 开始时的数字
+            speed: 2000,  // 总时间
+            refreshInterval:100,  // 刷新一次的时间
+            beforeSize:0, //小数点前最小显示位数，不足的话用0代替 
+            decimals: 0,  // 小数点后的位数，小数做四舍五入
+            onUpdate: function() {
+
+
+            },  // 更新时回调函数
+            onComplete: function() {
+                for(i in arguments){
+
+                    console.log(arguments[i]);
+                }
+            }
+        });
+
+
+        $(".timer").countTo({
+            lastSymbol: "", //显示在最后的字符
+            from: 0,  // 开始时的数字
+            speed: 2000,  // 总时间
+            refreshInterval:100,  // 刷新一次的时间
+            beforeSize:0, //小数点前最小显示位数，不足的话用0代替 
+            decimals: 2,  // 小数点后的位数，小数做四舍五入
+            onUpdate: function() {
+            	
+            },  // 更新时回调函数
+            onComplete: function() {
+                for(i in arguments){
+                    //console.log(arguments[i]);
+                }
+            }
+        });
+
+
+        $(".timer2").countTo({
+            lastSymbol: "", //显示在最后的字符
+            from: 0,  // 开始时的数字
+            speed: 2000,  // 总时间
+            refreshInterval:100,  // 刷新一次的时间
+            beforeSize:0, //小数点前最小显示位数，不足的话用0代替 
+            decimals: 2,  // 小数点后的位数，小数做四舍五入
+            onUpdate: function() {
+            },  // 更新时回调函数
+            onComplete: function() {
+                for(i in arguments){
+                    //console.log(arguments[i]);
+                }
+            }
+        });
+    });
+
+
+</script>
+</html>

@@ -1,0 +1,849 @@
+.map-wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-image: url(../images/map-bg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.map-wrap #china-map {
+  width: 23.2rem;
+  height: 16rem;
+  background: #1B1B1B;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.map-wrap .logo {
+  width: 5.76rem;
+  height: 1.28rem;
+  background-image: url(../images/map-logo.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  position: absolute;
+  left: 0.48rem;
+  top: 0.32rem;
+}
+.map-wrap .time {
+  width: 7.392rem;
+  height: 1.28rem;
+  background-image: url(../images/map-time.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  position: absolute;
+  right: 0.48rem;
+  top: 0.32rem;
+  /*.earthGif{
+			position: absolute;
+			right: 0/@rem;
+			width: 80/@rem;
+			top: 23/@rem;
+		}*/
+}
+.map-wrap .time .tt {
+  font-size: 0.384rem;
+  position: absolute;
+  height: 1.28rem;
+  line-height: 1.28rem;
+  left: 0.384rem;
+  color: #68efff;
+}
+.map-wrap .time .day {
+  font-size: 0.384rem;
+  position: absolute;
+  height: 1.28rem;
+  line-height: 1.28rem;
+  left: 2.32rem;
+  color: #007285;
+}
+.map-wrap .time .city {
+  font-size: 0.384rem;
+  position: absolute;
+  height: 1.28rem;
+  line-height: 1.28rem;
+  left: 5.28rem;
+  color: #007285;
+}
+.map-wrap .province {
+  width: 5.376rem;
+  height: 3.408rem;
+  background-image: url(../images/map-k.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 14.704rem;
+  top: 7.552rem;
+}
+.map-wrap .province .name {
+  position: absolute;
+  font-size: 0.224rem;
+  color: #00ddf7;
+  left: 0.416rem;
+  top: 0.128rem;
+  font-weight: bold;
+}
+.map-wrap .province .quyu {
+  width: 4.8rem;
+  height: 2.56rem;
+  position: absolute;
+  top: 0.64rem;
+  left: 0.416rem;
+}
+.map-wrap .province .quyu img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.map-wrap .province .quyu .fg-dot {
+  width: 0.32rem;
+  height: 0.32rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -0.16rem;
+  margin-top: -0.16rem;
+  background: #f3c800;
+  border-radius: 0.16rem;
+}
+.map-wrap .province .quyu .xian1 {
+  width: 3.44rem;
+  height: 0.048rem;
+  background: rgba(243, 200, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -1.504rem;
+  margin-left: -0.72rem;
+  transform: rotate(-55deg);
+  opacity: 1;
+  /*animation: xian1 1s linear 0s;*/
+}
+.map-wrap .province .quyu .xian2 {
+  width: 4.576rem;
+  height: 0.048rem;
+  background: rgba(243, 200, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -2.336rem;
+  margin-left: -1.696rem;
+  transform: rotate(-75deg);
+  opacity: 1;
+  /*animation: xian2 1s linear 0s;*/
+}
+.map-wrap .province .quyu .xian3 {
+  height: 8rem;
+  width: 0.048rem;
+  background: rgba(243, 200, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -1.568rem;
+  margin-left: -3.216rem;
+  transform: rotate(53deg);
+  opacity: 1;
+  /*animation: xian3 1s linear 0s;*/
+}
+.map-wrap .province .quyu .xian4 {
+  height: 6.944rem;
+  width: 0.048rem;
+  background: rgba(243, 200, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -0.64rem;
+  margin-left: -2.144rem;
+  transform: rotate(37deg);
+  opacity: 1;
+  /*animation: xian4 1s linear 0s;*/
+}
+.map-wrap .pie-box {
+  width: 4.448rem;
+  height: 5.344rem;
+  position: absolute;
+  top: 1.92rem;
+  right: 0.48rem;
+  border: 1px solid #002c46;
+}
+.map-wrap .pie-box .header-tab {
+  width: 100%;
+  display: flex;
+}
+.map-wrap .pie-box .header-tab .top {
+  font-size: 0.256rem;
+  text-align: center;
+  flex: 1;
+  color: #004758;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  border-right: 1px solid #002c46;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+.map-wrap .pie-box .header-tab .topstyle {
+  border: 1px solid #00b5e3;
+  color: #00b5e3;
+  border-bottom: none;
+  background-size: 100% 100%;
+  background-image: url(../images/map-pie-top.png);
+}
+.map-wrap .pie-box .circle-bg {
+  width: 100%;
+  height: 3.744rem;
+  border: 1px solid #00b5e3;
+  background-size: 100% 100%;
+  background-image: url(../images/map-piebg.png);
+  box-sizing: border-box;
+}
+.map-wrap .pie-box .circle-bg .circle {
+  width: 100%;
+  height: 3.744rem;
+}
+.map-wrap .pie-box .pie-bg2 {
+  height: 0.384rem;
+  line-height: 0.384rem;
+  width: 100%;
+  background-size: 100% 100%;
+  background-image: url(../images/map-piebg2.png);
+  box-sizing: border-box;
+  font-size: 0.224rem;
+  color: #f3c800;
+  padding-left: 0.24rem;
+  border: 1px solid #00b5e3;
+}
+.map-wrap .pie-box .pie-bg3 {
+  height: 0.816rem;
+  line-height: 0.816rem;
+  width: 100%;
+  background-size: 100% 100%;
+  background-image: url(../images/map-piebg3.png);
+  box-sizing: border-box;
+  font-size: 0.384rem;
+  color: #f3c800;
+  border: 1px solid #00b5e3;
+  text-align: center;
+}
+.map-wrap .pie-box2 {
+  width: 4.448rem;
+  height: 4.496rem;
+  position: absolute;
+  top: 7.584rem;
+  right: 0.48rem;
+  border: 1px solid #002c46;
+}
+.map-wrap .pie-box2 .header-tab {
+  width: 100%;
+  display: flex;
+}
+.map-wrap .pie-box2 .header-tab .top {
+  font-size: 0.256rem;
+  text-align: center;
+  flex: 1;
+  color: #004758;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  border-right: 1px solid #002c46;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+.map-wrap .pie-box2 .header-tab .topstyle {
+  border: 1px solid #00b5e3;
+  color: #00b5e3;
+  border-bottom: none;
+  background-size: 100% 100%;
+  background-image: url(../images/map-pie-top.png);
+}
+.map-wrap .pie-box2 .circle-bg {
+  width: 100%;
+  height: 4.016rem;
+  border: 1px solid #00b5e3;
+  background-size: 100% 100%;
+  background-image: url(../images/map-piebg.png);
+  box-sizing: border-box;
+}
+.map-wrap .pie-box2 .circle-bg .circle2 {
+  width: 100%;
+  height: 4.016rem;
+}
+.map-wrap .histogram-week {
+  width: 4.448rem;
+  height: 3.808rem;
+  position: absolute;
+  top: 12.4rem;
+  right: 0.48rem;
+  border: 1px solid #002c46;
+}
+.map-wrap .histogram-week .header-tab {
+  width: 100%;
+  display: flex;
+}
+.map-wrap .histogram-week .header-tab .top {
+  font-size: 0.256rem;
+  text-align: center;
+  flex: 1;
+  color: #004758;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  border-right: 1px solid #002c46;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+.map-wrap .histogram-week .header-tab .topstyle {
+  border: 1px solid #00b5e3;
+  color: #00b5e3;
+  border-bottom: none;
+  background-size: 100% 100%;
+  background-image: url(../images/map-pie-top.png);
+}
+.map-wrap .histogram-week .histogram-bg {
+  width: 100%;
+  height: 3.328rem;
+  border: 1px solid #00b5e3;
+  background-size: 100% 100%;
+  background-image: url(../images/map-piebg.png);
+  box-sizing: border-box;
+}
+.map-wrap .histogram-week .histogram-bg .histogram {
+  width: 100%;
+  height: 3.328rem;
+}
+.map-wrap .vip-box {
+  width: 6.336rem;
+  height: 1.44rem;
+  /*background: red;*/
+  top: 5.424rem;
+  left: 18.304rem;
+  position: absolute;
+}
+.map-wrap .vip-box .o-yuan {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.map-wrap .vip-box .c-yuan {
+  position: absolute;
+  right: 0.2rem;
+  top: 0.2rem;
+}
+.map-wrap .vip-box .n-yuan {
+  position: absolute;
+  right: 0.312rem;
+  top: 0.1952rem;
+}
+.map-wrap .vip-box .tb-logo {
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  right: 0.496rem;
+  top: 0.496rem;
+  /*background: red;*/
+}
+.map-wrap .vip-box .tb-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.map-wrap .vip-box .cz-png {
+  width: 1.936rem;
+  height: 0.096rem;
+  /*display: block;*/
+  position: absolute;
+  top: 0.288rem;
+  right: 1.28rem;
+  /*animation: vip-cz 1s linear 0s 1;*/
+}
+.map-wrap .vip-box .p-xian {
+  width: 4.368rem;
+  height: 0.4rem;
+  /*display: block;*/
+  position: absolute;
+  bottom: 0.224rem;
+  right: 1.248rem;
+  /*animation: vip-xian 1s linear 0s 1;*/
+}
+.map-wrap .vip-box .vip-number {
+  font-size: 0.32rem;
+  color: #f3c800;
+  position: absolute;
+  font-weight: bold;
+  top: 0.096rem;
+  right: 3.328rem;
+}
+.map-wrap .vip-box .vip-tit {
+  position: absolute;
+  top: 0.416rem;
+  right: 2.848rem;
+}
+.map-wrap .vip-box .vip-tit p {
+  font-size: 0.224rem;
+  color: #007387;
+  text-align: center;
+}
+.map-wrap .vip-box .vip-tit .p1 {
+  font-size: 0.256rem;
+  color: #00ddf7;
+  font-weight: bold;
+}
+.map-wrap .consume-box {
+  width: 6.336rem;
+  height: 1.44rem;
+  /*background: red;*/
+  top: 3.648rem;
+  left: 17.024rem;
+  position: absolute;
+}
+.map-wrap .consume-box .o-yuan {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.map-wrap .consume-box .c-yuan {
+  position: absolute;
+  right: 0.2rem;
+  top: 0.2rem;
+}
+.map-wrap .consume-box .n-yuan {
+  position: absolute;
+  right: 0.312rem;
+  top: 0.1952rem;
+}
+.map-wrap .consume-box .tb-logo {
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  right: 0.496rem;
+  top: 0.56rem;
+  /*background: red;*/
+}
+.map-wrap .consume-box .tb-logo img {
+  display: block;
+  width: 100%;
+  /*height: 100%*/
+}
+.map-wrap .consume-box .cz-png {
+  width: 1.936rem;
+  height: 0.096rem;
+  /*display: block;*/
+  position: absolute;
+  top: 0.288rem;
+  right: 1.28rem;
+}
+.map-wrap .consume-box .p-xian {
+  width: 4.368rem;
+  height: 0.4rem;
+  /*display: block;*/
+  position: absolute;
+  bottom: 0.224rem;
+  right: 1.248rem;
+}
+.map-wrap .consume-box .vip-number {
+  font-size: 0.32rem;
+  color: #f3c800;
+  position: absolute;
+  font-weight: bold;
+  top: 0.096rem;
+  right: 3.328rem;
+}
+.map-wrap .consume-box .vip-tit {
+  position: absolute;
+  top: 0.416rem;
+  right: 2.688rem;
+}
+.map-wrap .consume-box .vip-tit p {
+  font-size: 0.224rem;
+  color: #007387;
+  text-align: center;
+}
+.map-wrap .consume-box .vip-tit .p1 {
+  font-size: 0.256rem;
+  color: #00ddf7;
+  font-weight: bold;
+}
+.map-wrap .Order-volume {
+  width: 6.336rem;
+  height: 1.44rem;
+  /*background: red;*/
+  top: 13.504rem;
+  left: 5.088rem;
+  position: absolute;
+}
+.map-wrap .Order-volume .bo-yuan {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.map-wrap .Order-volume .bc-yuan {
+  position: absolute;
+  left: 0.2rem;
+  top: 0.2rem;
+}
+.map-wrap .Order-volume .bn-yuan {
+  position: absolute;
+  left: 0.336rem;
+  top: 0.1952rem;
+}
+.map-wrap .Order-volume .tb-logo {
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  left: 0.544rem;
+  top: 0.512rem;
+  /*background: red;*/
+}
+.map-wrap .Order-volume .tb-logo img {
+  display: block;
+  width: 100%;
+  /*height: 100%*/
+}
+.map-wrap .Order-volume .cz-png {
+  width: 1.936rem;
+  height: 0.096rem;
+  /*display: block;*/
+  position: absolute;
+  top: 0.288rem;
+  left: 1.28rem;
+}
+.map-wrap .Order-volume .p-xian {
+  width: 4.368rem;
+  height: 0.4rem;
+  /*display: block;*/
+  position: absolute;
+  bottom: 0.224rem;
+  left: 1.248rem;
+}
+.map-wrap .Order-volume .vip-number {
+  font-size: 0.32rem;
+  color: #f3c800;
+  position: absolute;
+  font-weight: bold;
+  top: 0.096rem;
+  left: 3.328rem;
+}
+.map-wrap .Order-volume .vip-tit {
+  position: absolute;
+  top: 0.416rem;
+  left: 2.848rem;
+}
+.map-wrap .Order-volume .vip-tit p {
+  font-size: 0.224rem;
+  color: #007387;
+  text-align: center;
+}
+.map-wrap .Order-volume .vip-tit .p1 {
+  font-size: 0.256rem;
+  color: #00ddf7;
+  font-weight: bold;
+}
+.map-wrap .region-box {
+  width: 6.336rem;
+  height: 1.44rem;
+  /*background: red;*/
+  top: 15.12rem;
+  left: 8.448rem;
+  position: absolute;
+}
+.map-wrap .region-box .bo-yuan {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.map-wrap .region-box .bc-yuan {
+  position: absolute;
+  left: 0.2rem;
+  top: 0.2rem;
+}
+.map-wrap .region-box .bn-yuan {
+  position: absolute;
+  left: 0.336rem;
+  top: 0.1952rem;
+}
+.map-wrap .region-box .tb-logo {
+  width: 0.32rem;
+  height: 0.4rem;
+  position: absolute;
+  left: 0.576rem;
+  top: 0.496rem;
+  /*background: red;*/
+}
+.map-wrap .region-box .tb-logo img {
+  display: block;
+  width: 100%;
+  /*height: 100%*/
+}
+.map-wrap .region-box .cz-png {
+  width: 1.936rem;
+  height: 0.096rem;
+  /*display: block;*/
+  position: absolute;
+  top: 0.288rem;
+  left: 1.28rem;
+}
+.map-wrap .region-box .p-xian {
+  width: 4.368rem;
+  height: 0.4rem;
+  /*display: block;*/
+  position: absolute;
+  bottom: 0.224rem;
+  left: 1.248rem;
+}
+.map-wrap .region-box .vip-number {
+  font-size: 0.32rem;
+  color: #f3c800;
+  position: absolute;
+  font-weight: bold;
+  top: 0.096rem;
+  left: 3.328rem;
+}
+.map-wrap .region-box .vip-tit {
+  position: absolute;
+  top: 0.416rem;
+  left: 2.848rem;
+}
+.map-wrap .region-box .vip-tit p {
+  font-size: 0.224rem;
+  color: #007387;
+  text-align: center;
+}
+.map-wrap .region-box .vip-tit .p1 {
+  font-size: 0.256rem;
+  color: #00ddf7;
+  font-weight: bold;
+}
+.noshow {
+  display: none;
+}
+/***********点的动画*************/
+.dotanimation {
+  animation: dotchange 1s;
+  -moz-animation: dotchange 1s;
+  -webkit-animation: dotchange 1s;
+  -o-animation: dotchange 1s;
+  opacity: 1;
+}
+@keyframes dotchange {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/**********省份动画开始************/
+.map2-animation {
+  animation: change 1s;
+  -moz-animation: change 1s;
+  -webkit-animation: change 1s;
+  -o-animation: change 1s;
+  opacity: 1;
+  /*border: 1px solid #b1b1b1;*/
+}
+@keyframes change {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/**********省份动画结束************/
+.xian1Animation {
+  animation: xian1 1s linear 0s 1;
+}
+.xian2Animation {
+  animation: xian2 1s linear 0s 1;
+}
+.xian3Animation {
+  animation: xian3 1s linear 0s 1;
+}
+.xian4Animation {
+  animation: xian4 1s linear 0s 1;
+}
+.vip-cz {
+  animation: vip-cz 0.5s linear 0s 1;
+}
+.vip-xian {
+  animation: vip-xian 0.5s linear 0s 1;
+}
+.vip-xianb {
+  animation: vip-xianb 0.5s linear 0s 1;
+}
+.vip-titanimation {
+  animation: titanimation 1s linear 0s 1;
+}
+@keyframes xian1 {
+  from {
+    width: 0;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    transform: rotate(-55deg);
+    opacity: 0;
+  }
+  to {
+    width: 3.44rem;
+    margin-top: -1.504rem;
+    margin-left: -0.72rem;
+    transform: rotate(-55deg);
+    opacity: 1;
+  }
+}
+@keyframes xian2 {
+  from {
+    width: 0;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    transform: rotate(-75deg);
+    opacity: 0;
+  }
+  to {
+    width: 4.576rem;
+    margin-top: -2.336rem;
+    margin-left: -1.696rem;
+    transform: rotate(-75deg);
+    opacity: 1;
+  }
+}
+@keyframes xian3 {
+  from {
+    height: 0;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    transform: rotate(53deg);
+    opacity: 0;
+  }
+  to {
+    height: 8rem;
+    margin-top: -1.568rem;
+    margin-left: -3.216rem;
+    transform: rotate(53deg);
+    opacity: 1;
+  }
+}
+@keyframes xian4 {
+  from {
+    height: 0;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    transform: rotate(37deg);
+    opacity: 0;
+  }
+  to {
+    height: 6.944rem;
+    margin-top: -0.64rem;
+    margin-left: -2.144rem;
+    transform: rotate(37deg);
+    opacity: 1;
+  }
+}
+@keyframes vip-xian {
+  from {
+    transform: translate3d(50%, 0, 0);
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    width: 4.368rem;
+    opacity: 1;
+  }
+}
+@keyframes vip-xianb {
+  from {
+    transform: translate3d(-50%, 0, 0);
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    width: 4.368rem;
+    opacity: 1;
+  }
+}
+@keyframes vip-cz {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 1.936rem;
+    opacity: 1;
+  }
+}
+@keyframes titanimation {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    /*width: 0;*/
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    /*width: 100%;*/
+    opacity: 1;
+  }
+}
+/**************光波效果*****************/
+.faguang:before {
+  content: ' ';
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 0.32rem;
+  height: 0.32rem;
+  background-color: #f3c800;
+  border-radius: 50%;
+}
+.faguang:after {
+  content: ' ';
+  position: absolute;
+  z-index: 1;
+  width: 0.32rem;
+  height: 0.32rem;
+  background-color: #f3c800;
+  border-radius: 50%;
+  box-shadow: 0 0 0.32rem rgba(0, 0, 0, 0.3) inset;
+  -webkit-animation-name: 'ripple';
+  /*动画属性名，也就是我们前面keyframes定义的动画名*/
+  -webkit-animation-duration: 1s;
+  /*动画持续时间*/
+  -webkit-animation-timing-function: ease;
+  /*动画频率，和transition-timing-function是一样的*/
+  -webkit-animation-delay: 0s;
+  /*动画延迟时间*/
+  -webkit-animation-iteration-count: infinite;
+  /*定义循环资料，infinite为无限次*/
+  -webkit-animation-direction: normal;
+  /*定义动画方式*/
+}
+@keyframes ripple {
+  0% {
+    left: 0.16rem;
+    top: 0.16rem;
+    opcity: 75;
+    width: 0;
+    height: 0;
+  }
+  100% {
+    left: -0.24rem;
+    top: -0.24rem;
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+  }
+}
+/************动画展示过程中防止再次点击产生蒙版**********************/
+.noClick-mb {
+  width: 100%;
+  height: 100%;
+  /*background: red;*/
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  display: none;
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>地图</title>
+	<link rel="stylesheet" href="../css/global.css">
+	<link rel="stylesheet" href="../css/china-map.css">
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/wy_rem.js"></script>	
+	<script src="../js/echarts.js"></script>
+	<script src="../js/china.js"></script>
+	<script type="text/javascript" src="../js/countUp.js"></script>
+	<script type="text/javascript" src="../js/circle-progress.js"></script>
+	<script type="text/javascript" src="../js/china-map.js"></script>
+	<script type="text/javascript" src="../js/map-animation.js"></script>
+	<script type="text/javascript" src="../js/china-fuc.js"></script>
+</head>
+<body style="background: #000b20;">
+	
+	<div class="map-wrap">
+		<!--logo-->
+		<div class="logo"></div>
+		<!--time-->
+		<div class="time">
+			<div class="tt"></div>
+			<div class="day"><span class="rz"></span> <span class="year"></span></div>
+			<div class="city">china</div>
+			<!--gif地球-->
+			<!-- <img src="../images/earth.gif" alt="" class="earthGif"> -->
+		</div>
+
+		<!--中国地图-->
+		<div id="china-map"></div>
+		
+		<!--省份地图-->
+		<div class="province noshow">
+			<div class="name">广州</div>
+			<div class="quyu">
+				<img src="../images/province1.png" alt="">
+				<div class="fg-dot faguang"></div>
+
+				<!--4条线m-pp-->
+				<!--会员数-->
+				<div class="xian1 noshow"></div>
+				<!--消费订单-->
+				<div class="xian2 noshow"></div>
+				<!--订单交易额-->
+				<div class="xian3 noshow"></div>
+				<!--地区收益-->
+				<div class="xian4 noshow"></div>
+				
+
+			</div>
+		</div>
+
+
+		<!--pie图-->
+		<div class="pie-box noshow">
+			<!--tab切换头部-->
+			<div class="header-tab">
+				<div class="top topstyle">会员数</div>
+				<div class="top ">订单数</div>
+				<div class="top ">订单额</div>
+				<div class="top ">收益</div>
+			</div>
+			<!--圆形数据-->
+			<div class="circle-bg">
+				<div id="circle" class="circle"></div>
+			</div>
+			<!---->
+			<div class="pie-bg2">总数</div>
+			<div class="pie-bg3" id="pie-bg3"></div>
+
+
+		</div>
+
+		<!--饼状图-->
+		<div class="pie-box2 noshow">
+			<!--tab切换头部-->
+			<div class="header-tab">
+				<div class="top topstyle">消费金额来源</div>
+				<div class="top ">消费次数来源</div>
+			</div>
+			<div class="circle-bg">
+				<div id="circle2" class="circle2"></div>
+			</div>
+
+		</div>
+
+		
+		<!--一周柱状图-->
+		<div class="histogram-week noshow">
+			<!--tab切换头部-->
+			<div class="header-tab">
+				<div class="top topstyle">会员数</div>
+				<div class="top ">订单数</div>
+				<div class="top ">订单额</div>
+				<div class="top ">收益</div>
+			</div>
+			<div class="histogram-bg">
+				<div id="histogram" class="histogram"></div>
+			</div>
+			
+		</div>
+
+
+		<!--会员数定位-->
+		<div class="vip-box noshow">
+			<!--三圆动画-->
+			<div class="o-yuan"></div>
+			<div class="c-yuan"></div>
+			<div class="n-yuan"></div>
+			<!--图标-->
+			<div class="tb-logo">
+				<img src="../images/people.png" alt="">
+			</div>
+			<!--线条-->
+			<img src="../images/position-tiao.png" alt="" class="cz-png noshow">
+		
+			<img src="../images/xian.png" alt="" class="p-xian noshow">
+
+			<!--会员数-->
+			<div class="vip-number noshow" id="vip"></div>
+
+			<div class="vip-tit noshow">
+				<p class="p1">会员数</p>
+				<p>Members</p>
+			</div>
+
+		</div>
+
+
+		<!--消费订单-->
+		<div class="consume-box noshow">
+			<!--三圆动画-->
+			<div class="o-yuan"></div>
+			<div class="c-yuan"></div>
+			<div class="n-yuan"></div>
+			<!--图标-->
+			<div class="tb-logo">
+				<img src="../images/shop.png" alt="">
+			</div>
+			<!--线条-->
+			<img src="../images/position-tiao.png" alt="" class="cz-png noshow">
+		
+			<img src="../images/xian.png" alt="" class="p-xian noshow">
+
+			<!--会员数-->
+			<div class="vip-number noshow" id="consume"></div>
+
+			<div class="vip-tit noshow">
+				<p class="p1">消费订单</p>
+				<p>Consumer orders</p>
+			</div>
+
+		</div>
+
+
+		<!--订单交易额-->
+		<div class="Order-volume noshow">
+			<!--三圆动画-->
+			<div class="bo-yuan"></div>
+			<div class="bc-yuan"></div>
+			<div class="bn-yuan"></div>
+			<!--图标-->
+			<div class="tb-logo">
+				<img src="../images/money.png" alt="">
+			</div>
+			<!--线条-->
+			<img src="../images/position-tiao-b.png" alt="" class="cz-png noshow">
+		
+			<img src="../images/xian-b.png" alt="" class="p-xian noshow">
+
+			<!--会员数-->
+			<div class="vip-number noshow" id="Order-volume"></div>
+
+			<div class="vip-tit noshow">
+				<p class="p1">订单交易额</p>
+				<p>Order volume</p>
+			</div>
+	
+
+		</div>
+
+		<!--地区收益-->
+		<div class="region-box noshow">
+			<!--三圆动画-->
+			<div class="bo-yuan"></div>
+			<div class="bc-yuan"></div>
+			<div class="bn-yuan"></div>
+			<!--图标-->
+			<div class="tb-logo">
+				<img src="../images/purse.png" alt="">
+			</div>
+			<!--线条-->
+			<img src="../images/position-tiao-b.png" alt="" class="cz-png noshow">
+		
+			<img src="../images/xian-b.png" alt="" class="p-xian noshow">
+
+			<!--会员数-->
+			<div class="vip-number noshow" id="region"></div>
+
+			<div class="vip-tit noshow">
+				<p class="p1">地区收益</p>
+				<p>Our income</p>
+			</div>
+
+		</div>
+
+
+
+
+
+		
+
+	</div>
+
+<!--动画展示过程中防止再次点击产生-->
+<div class="noClick-mb"></div>
+
+
+</body>
+<script type="text/javascript">
+	
+	
+	//调用时间
+	setInterval("newData()",1000)
+
+	var myChart = echarts.init(document.getElementById('china-map'));
+	//进来展示中国地图。
+	tabProvincial();
+	
+	myChart.on('click', function (params) {
+            // myChart.setOption(option,true);
+            var dataIndex = params.dataIndex;
+            console.log(params);
+            //省份
+            var area = params.name
+            //数据板块
+            tabProvincial(area);
+            showAnimation();
+            showCircle(area);
+            showCircleTwo();
+            showHistogram();
+            
+            //地区更换
+            $(".time .city").html(area);
+            $(".province .name").html(area);
+            // if(params.region.selected == true){
+            // 	hideAnimation();
+            // 	showAnimation();
+            // }
+    });
+       
+         
+    $(".pie-box .top").on('click', function(){
+    	$(".pie-box .top").removeClass("topstyle");
+    	$(this).addClass("topstyle")
+
+    	//数据变更。
+    	showCircle();
+    	// myCircle.clear();
+    	// myCircle.setOption(option1, true);
+
+    })
+
+
+    $(".pie-box2 .top").on('click', function(){
+    	$(".pie-box2 .top").removeClass("topstyle");
+    	$(this).addClass("topstyle")
+
+    	showCircleTwo();  
+
+    })
+
+    $(".histogram-week .top").on('click', function(){
+    	$(".histogram-week .top").removeClass("topstyle");
+    	$(this).addClass("topstyle")
+
+    	showHistogram();
+
+    })
+
+
+
+
+
+</script>
+
+</html>
